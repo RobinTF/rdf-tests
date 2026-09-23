@@ -20,6 +20,7 @@
       :dawg-langMatches-3 :dawg-langMatches-4 :dawg-langMatches-basic
       :lang-case-insensitive-eq
       :lang-case-insensitive-ne
+      :lang-case-insensitive-lang
       :sameTerm-simple :sameTerm-eq :sameTerm-not-eq
       :case-insensitive-booleans
     ).
@@ -282,3 +283,12 @@
          [ qt:query  <case-insensitive-booleans.rq> ] ;
     mf:result  <case-insensitive-booleans.srx>
     .
+
+:lang-case-insensitive-lang a mf:QueryEvaluationTest ;
+    mf:name    "lang-case-insensitive-lang" ;
+    dawgt:approval dawgt:Proposed ;
+    rdfs:comment "LANG('xyz'@en) = LANG('xyz'@EN): language tags are normalized to lower case (RDF Concepts 2004, section 6.5)" ;
+    mf:action
+       [ qt:query  <lang-case-sensitivity-lang.rq> ;
+         qt:data   <lang-case-sensitivity.ttl> ] ;
+    mf:result  <lang-case-insensitive-lang.srx> .
