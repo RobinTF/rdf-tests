@@ -1,0 +1,11 @@
+PREFIX ex: <http://example.org/>
+
+SELECT ?x
+FROM NAMED <data01.ttl>
+WHERE {
+    { GRAPH <data01.ttl> { VALUES ?x { 1 } } }
+    UNION
+    { GRAPH <data02.ttl> { VALUES ?x { 2 } } }
+    UNION
+    { GRAPH ex:unknown { VALUES ?x { 3 } } }
+}

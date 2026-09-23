@@ -1,0 +1,9 @@
+PREFIX ex: <http://example.org/>
+
+SELECT ?g ?x
+FROM NAMED <data01.ttl>
+WHERE {
+    GRAPH ?g {
+        VALUES (?g ?x) { (UNDEF 1) (<data01.ttl> 2) (<data02.ttl> 3) (ex:unknown 4) }
+    }
+}
