@@ -249,7 +249,6 @@
     mf:name "graph-nested-1" ;
     rdfs:comment  "GRAPH ?g nested in GRAPH ?g (same variable)" ;
     rdfs:comment  "The inner GRAPH is evaluated against all named graphs of the dataset; the shared variable restricts the result to matching graph names" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
             [ qt:query        <graph-nested-1.rq> ;
               qt:graphData    <data-nested-g1.ttl> ;
@@ -262,7 +261,6 @@
     mf:name "graph-nested-2" ;
     rdfs:comment  "GRAPH ?g0 nested in GRAPH ?g1 (different variables)" ;
     rdfs:comment  "The inner GRAPH is evaluated against all named graphs of the dataset, independently of the outer graph name" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
             [ qt:query        <graph-nested-2.rq> ;
               qt:graphData    <data-nested-g1.ttl> ;
@@ -275,7 +273,6 @@
     mf:name "graph-nested-3" ;
     rdfs:comment  "GRAPH <iri> nested in GRAPH ?g" ;
     rdfs:comment  "The inner GRAPH selects a fixed named graph, independently of the outer graph name" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
             [ qt:query        <graph-nested-3.rq> ;
               qt:graphData    <data-nested-g1.ttl> ;
@@ -288,7 +285,6 @@
     mf:name "graph-nested-4" ;
     rdfs:comment  "GRAPH ?g nested in GRAPH <iri>" ;
     rdfs:comment  "The inner GRAPH is evaluated against all named graphs of the dataset, not only the one selected by the outer GRAPH" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
             [ qt:query        <graph-nested-4.rq> ;
               qt:graphData    <data-nested-g1.ttl> ;
