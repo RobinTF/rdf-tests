@@ -900,7 +900,6 @@
     mf:name    "STRLANG() with language tags differing in case" ;
     rdfs:comment "STRLANG(\"abc\", \"en\") = STRLANG(\"abc\", \"EN\") and STRLANG(\"abc\", \"EN\") = \"abc\"@en are both true" ;
     mf:feature sparql:strlang ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
          [ qt:query  <strlang04.rq> ;
            qt:data   <data-empty.nt> ] ;
