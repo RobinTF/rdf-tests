@@ -1,6 +1,6 @@
 PREFIX : <http://example.com/>
 
-SELECT ?s ?o WHERE {
+SELECT * {
   GRAPH <data-nested-g1.ttl> {
     GRAPH ?g {
       ?s :p ?o
