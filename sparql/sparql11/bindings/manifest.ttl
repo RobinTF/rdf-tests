@@ -154,7 +154,6 @@
 :graph-no-var rdf:type mf:QueryEvaluationTest ;
     mf:name    "VALUES inside GRAPH not mentioning the graph name variable" ;
     rdfs:comment "Each VALUES row is joined with every named graph" ;
-    dawgt:approval dawgt:Proposed ;
     mf:action
     [
         qt:query  <graph-no-var.rq> ;
